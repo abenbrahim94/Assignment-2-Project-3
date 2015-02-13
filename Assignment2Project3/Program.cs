@@ -30,7 +30,7 @@ namespace Assignment2Project3
             HW = Convert.ToDouble (Console.ReadLine());
             Console.Write("\n");
             GrossPay = HW * HPR;
-            Console.WriteLine("According to the Hourly Pay rate you entered of {0} And the Amount of hours you entered of {1}, Your Gross Pay is {2}", HPR, HW, GrossPay);
+            Console.WriteLine("According to the Hourly Pay rate you entered of {0:c} And the Amount of hours you entered of {1}, Your Gross Pay is {2:c}", HPR, HW, GrossPay);
             if (GrossPay <= 300)
             {
                 NetPay = GrossPay - TaxLow;
@@ -40,10 +40,6 @@ namespace Assignment2Project3
             {
                 NetPay = GrossPay - TaxHigh;
                 Console.WriteLine("After Tax Deductions, Your Net Pay Is {0:c}", NetPay);
-            }
-            else
-            {
-                Console.WriteLine("Your Application Has Been Rejected!");
             }
             Console.WriteLine("+++++++++++++++++++++++++++++++++++++++++");
             Console.WriteLine("Press any key to exit ...");
